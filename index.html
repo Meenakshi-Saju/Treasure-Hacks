@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sports Guide</title>
+    <h1 class="heading">SPORTS GUIDE FOR BEGINNERS</h1>
+    <link rel="stylesheet" href="Treasure-Hacks/style.css" />
+
     <style>
       * {
         margin: 0;
@@ -12,218 +15,56 @@
         font-family: "Times New Roman", Times, serif;
       }
 
-      .first {
-        width: 100%;
+      header {
+        background-image: url(pic1.PNG);
         height: 100vh;
-        position: relative;
-        overflow: hidden;
-        background-color: black;
-        background-image: url(theu.PNG);
         background-size: cover;
-      }
-      nav {
-        width: 80%;
-        position: sticky;
-        margin: 20px;
-        z-index: 1;
-        display: flex;
-        align-items: center;
+        background-position: center;
       }
 
-      .pic {
-        flex-basis: 20%;
+      ul {
+        float: right;
+        list-style-type: none;
+        margin-top: 25px;
       }
 
-      .pic img {
-        width: 150px;
-      }
-
-      .sports-links {
-        flex: 1;
-        text-align: right;
-      }
-
-      .sports-links ul li {
-        list-style: none;
+      ul li {
         display: inline-block;
-        margin: 0 20px;
       }
 
-      .sports-links ul li a {
-        color: white;
+      ul li a {
         text-decoration: none;
+        color: white;
+        padding: 5px 20px;
+        border: 1px solid;
+        transition: 0.5s ease;
       }
 
-      .info {
-        width: 1000px;
-        height: 1000px;
-        position: absolute;
-        top: 50%;
-        left: -10%;
-        transform: translateY(-50%);
-      }
-
-      #circle {
-        width: 1000px;
-        height: 1000px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-        transform: rotate(0 deg);
-        transition: ls;
-      }
-
-      .feature img {
-        width: 70px;
-      }
-
-      .feature {
-        position: absolute;
-        display: flex;
-      }
-
-      .feature div {
-        margin-left: 30px;
-      }
-
-      .feature div p {
-        margin-top: 8px;
-      }
-
-      .one {
-        top: 450px;
-        right: 50px;
-      }
-
-      .two {
-        top: 150px;
-        left: 350px;
-        transform: rotate(-90deg);
-      }
-
-      .three {
-        bottom: 450px;
-        left: 50px;
-        transform: rotate(-180deg);
-      }
-
-      .four {
-        bottom: 150px;
-        right: 350px;
-        transform: rotate(-270deg);
-      }
-
-      .controls {
-        position: absolute;
-        right: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-      }
-
-      .controls h3 {
-        margin: 15px 0;
+      ul li a:hover {
+        background-color: black;
         color: white;
       }
 
-      #up {
-        width: 15px;
-        cursor: pointer;
-      }
-
-      #down {
-        width: 15px;
-        cursor: pointer;
-        transform: rotate(180deg);
-      }
-
-      .overlay {
-        width: 0;
-        height: 0;
-        border-top: 500px solid white;
-        border-right: 500px solid transparent;
-        border-bottom: 500px solid white;
-        border-left: 500px solid white;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-
-      h1 {
+      .heading {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 60;
+        font-weight: bold;
+        text-align: center;
+        background-color: black;
         color: white;
       }
     </style>
   </head>
   <body>
-    <div class="first">
-      <nav>
-        <div class="sports-links">
-          <ul>
-            <li><a href="#">Badminton</a></li>
-            <li><a href="#">Tennis</a></li>
-            <li><a href="#">Cricket</a></li>
-            <li><a href="#">Football</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="info">
-        <div class="overlay"></div>
-        <div id="circle">
-          <div class="feature one">
-            <img src="football.png" />
-            <div>
-              <h1>Football</h1>
-            </div>
-          </div>
-          <div class="feature two">
-            <img src="tennis.png" />
-            <div>
-              <h1>Tennis</h1>
-            </div>
-          </div>
-
-          <div class="feature three">
-            <img src="cricket.png" />
-            <div>
-              <h1>Cricket</h1>
-            </div>
-          </div>
-
-          <div class="feature four">
-            <img src="badminton.png" />
-            <div>
-              <h1>Badminton</h1>
-            </div>
-          </div>
-        </div>
+    <header>
+      <div class="first">
+        <ul>
+          <li><a href="http://127.0.0.1:5500/pls/cricket.html">Cricket</a></li>
+          <li>
+            <a href="http://127.0.0.1:5500/pls/badminton.html">Football</a>
+          </li>
+        </ul>
       </div>
-      <div class="controls">
-        <img src="arrow.png" id="up" />
-        <h3>Navigate</h3>
-        <img src="arrow.png" id="down" />
-      </div>
-    </div>
-
-    <script>
-      var circle = document.getElementById("circle");
-      var up = document.getElementById("up");
-      var down = document.getElementById("down");
-
-      var rotateValue = circle.style.transform;
-      var rotateSum;
-
-      up.onclick = function () {
-        rotateSum = rotateValue + "rotate(-90deg)";
-        circle.style.transform = rotateSum;
-        rotateValue = rotateSum;
-      };
-
-      down.onclick = function () {
-        rotateSum = rotateValue + "rotate(90deg)";
-        circle.style.transform = rotateSum;
-        rotateValue = rotateSum;
-      };
-    </script>
+    </header>
   </body>
 </html>
