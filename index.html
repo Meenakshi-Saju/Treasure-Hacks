@@ -70,7 +70,7 @@
         top: 0;
         left: 0;
         border-radius: 50%;
-        background: white;
+        transform: rotate(0 deg);
         transition: ls;
       }
 
@@ -141,13 +141,17 @@
       .overlay {
         width: 0;
         height: 0;
-        border-top: 500px solid grey;
+        border-top: 500px solid white;
         border-right: 500px solid transparent;
-        border-bottom: 500px solid grey;
-        border-left: 500px solid grey;
+        border-bottom: 500px solid white;
+        border-left: 500px solid white;
         position: absolute;
         left: 0;
         top: 0;
+      }
+
+      h1 {
+        color: white;
       }
     </style>
   </head>
@@ -167,27 +171,27 @@
         <div class="overlay"></div>
         <div id="circle">
           <div class="feature one">
-            <img src="football.png" alt="FOOTBALL" />
+            <img src="football.png" />
             <div>
               <h1>Football</h1>
             </div>
           </div>
           <div class="feature two">
-            <img src="tennis.png" alt="FOOTBALL" />
+            <img src="tennis.png" />
             <div>
               <h1>Tennis</h1>
             </div>
           </div>
 
           <div class="feature three">
-            <img src="cricket.png" alt="FOOTBALL" />
+            <img src="cricket.png" />
             <div>
               <h1>Cricket</h1>
             </div>
           </div>
 
           <div class="feature four">
-            <img src="badminton.png" alt="FOOTBALL" />
+            <img src="badminton.png" />
             <div>
               <h1>Badminton</h1>
             </div>
